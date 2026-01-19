@@ -20,5 +20,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf /var/www/html/*
-            sudo cp -r website/* /var/www/html/
+            sudo cp -r ~/app/* /var/www/html/
+            sudo chown -R www-data:www-data /var/www/html
             sudo systemctl reload nginx
