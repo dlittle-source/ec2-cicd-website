@@ -20,5 +20,5 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf /var/www/html/*
-            sudo cp -r ~/actions-runner/_work/ec2-cicd-website/ec2-cicd-website/website/* /var/www/html/
+            sudo cp -r website/* /var/www/html/
             sudo systemctl reload nginx
